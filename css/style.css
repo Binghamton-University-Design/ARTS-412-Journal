@@ -1,0 +1,199 @@
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /*grid-template-rows: 10vw 30vw 10vw;*/
+  grid-gap: 1em;
+  padding: 0 1em
+}
+
+#masthead,
+footer {
+  grid-column: 1 / span 12;
+}
+
+main {
+  grid-column: 1 / span 8;
+}
+
+aside {
+  grid-column: span 4;
+}
+
+@media (max-width: 700px) {
+  
+  main,
+  aside {
+    grid-column: 1 / span 12;
+  }
+  
+  aside {
+    order: 1;
+  }
+  
+  main {
+    order: 2;
+  }
+
+  footer {
+    order: 3;
+  }
+  
+}
+
+body {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+#masthead, #footer {
+ margin: 0 1em; 
+}
+
+#masthead, 
+#footer,
+main,
+aside {
+  padding: 1em;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  line-height: 1.4em;
+  font-size: 14px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.4em;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-weight: 300;
+}
+
+#masthead {
+  border-bottom: 1px solid #dddddd;
+  text-align: right;
+}
+
+#masthead h4 a {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+header {
+  border-bottom: 3px solid #000;
+  margin-bottom: 1em;
+}
+
+header img {
+  margin-bottom: 14px;
+}
+
+footer {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+p.footer {
+    color: #bbbbbb;
+    font-size: 11px;
+  }
+
+.item {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+
+.item h2 {
+  font-weight: 300;
+  font-size: 36px;
+}
+
+.item p {
+  clear: both;
+}
+
+.item p.date {
+  margin: 0;
+  color: #bbbbbb;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.bio h3 {
+  border-top: 1px solid #dddddd;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: underline;
+  color: #000000;
+  transition: all 0.15s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+@media (max-width: 700px) {
+
+  .hideme {
+    display: none;
+  }
+
+  .bio {
+    padding-bottom: 2em;
+    border-bottom: 3px solid #000;
+  }
+
+  .item h2 {
+    font-size: 24px;
+  }
+
+  .item p.date {
+    font-size: 9px;
+  }
+
+  #wrapper {
+    padding: 0 .5em
+  }
+
+#masthead, 
+#footer {
+  margin: 0 .5em
+}
+
+#masthead, 
+#footer,
+main,
+aside {
+    padding: 1em .5em;
+  }
+  
+}
